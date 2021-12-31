@@ -1,0 +1,76 @@
+# //  Questa Sim-64
+# //  Version 2021.2 linux_x86_64 Apr 14 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+vlib work
+vcom -reportprogress 300 -work work {/home/bwg/CPRE381/cpre381-project1/Fetch logic/Fetch.vhd}
+# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:16:26 on Nov 04,2021
+# vcom -reportprogress 300 -work work /home/bwg/CPRE381/cpre381-project1/Fetch logic/Fetch.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Fetch
+# -- Compiling architecture structural of Fetch
+# End time: 15:16:26 on Nov 04,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -reportprogress 300 -work work {/home/bwg/CPRE381/cpre381-project1/Fetch logic/tb_Fetch.vhd}
+# QuestaSim-64 vcom 2021.2 Compiler 2021.04 Apr 14 2021
+# Start time: 15:16:26 on Nov 04,2021
+# vcom -reportprogress 300 -work work /home/bwg/CPRE381/cpre381-project1/Fetch logic/tb_Fetch.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity tb_Fetch
+# -- Compiling architecture behavior of tb_Fetch
+# End time: 15:16:26 on Nov 04,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.fetch
+# vsim work.fetch 
+# Start time: 15:16:32 on Nov 04,2021
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: /home/bwg/CPRE381/cpre381-project1/Fetch logic/Fetch.vhd(96): (vopt-3473) Component instance "PC : register_N" is not bound.
+#         Region: /Fetch
+# ** Warning: /home/bwg/CPRE381/cpre381-project1/Fetch logic/Fetch.vhd(100): (vopt-3473) Component instance "Add_4 : full_add_N" is not bound.
+#         Region: /Fetch
+# ** Warning: /home/bwg/CPRE381/cpre381-project1/Fetch logic/Fetch.vhd(105): (vopt-3473) Component instance "JumpAdd : full_add_N" is not bound.
+#         Region: /Fetch
+# ** Warning: /home/bwg/CPRE381/cpre381-project1/Fetch logic/Fetch.vhd(107): (vopt-3473) Component instance "Andg : andg2" is not bound.
+#         Region: /Fetch
+# ** Warning: /home/bwg/CPRE381/cpre381-project1/Fetch logic/Fetch.vhd(109): (vopt-3473) Component instance "JAMux : mux2t1_N" is not bound.
+#         Region: /Fetch
+# ** Warning: /home/bwg/CPRE381/cpre381-project1/Fetch logic/Fetch.vhd(117): (vopt-3473) Component instance "JumpMux : mux4t1_N" is not bound.
+#         Region: /Fetch
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=6.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.fetch(structural)#1
+# ** Warning: (vsim-3473) Component instance "PC : register_N" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch File: /home/bwg/CPRE381/cpre381-project1/Fetch logic/Fetch.vhd
+# ** Warning: (vsim-3473) Component instance "Add_4 : full_add_N" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch File: /home/bwg/CPRE381/cpre381-project1/Fetch logic/Fetch.vhd
+# ** Warning: (vsim-3473) Component instance "JumpAdd : full_add_N" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch File: /home/bwg/CPRE381/cpre381-project1/Fetch logic/Fetch.vhd
+# ** Warning: (vsim-3473) Component instance "Andg : andg2" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch File: /home/bwg/CPRE381/cpre381-project1/Fetch logic/Fetch.vhd
+# ** Warning: (vsim-3473) Component instance "JAMux : mux2t1_N" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch File: /home/bwg/CPRE381/cpre381-project1/Fetch logic/Fetch.vhd
+# ** Warning: (vsim-3473) Component instance "JumpMux : mux4t1_N" is not bound.
+#    Time: 0 ns  Iteration: 0  Instance: /fetch File: /home/bwg/CPRE381/cpre381-project1/Fetch logic/Fetch.vhd
+add wave -position insertpoint sim:/fetch/*
+run
+quit -sim
+# End time: 15:19:04 on Nov 04,2021, Elapsed time: 0:02:32
+# Errors: 0, Warnings: 12
+add wave -position insertpoint vsim:/tb/MyMips/fetch0/*
